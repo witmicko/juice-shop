@@ -40,7 +40,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript-typescript', 'python' ]
+        language: [ 'javascript-typescript']
         # CodeQL supports [ 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift' ]
         # Use only 'java-kotlin' to analyze code written in Java, Kotlin or both
         # Use only 'javascript-typescript' to analyze code written in JavaScript, TypeScript or both
@@ -55,7 +55,7 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        config-file: MetaMask/Appsec-CodeQL/blob/main/scan-configs/test-codeql-config.yaml
+        config-file: MetaMask/Appsec-CodeQL/scan-configs/test-codeql-config.yaml@main
         queries: +security-and-quality
         
         # If you wish to specify custom queries, you can do so here or in a config file.
