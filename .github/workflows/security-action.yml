@@ -1,0 +1,25 @@
+# witmicko-code-scanning.yml
+
+name: "Code Scanning"
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [ '*' ]
+  # pull_request:
+  #   branches: [ '*' ]
+
+jobs:
+  run-security-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: witmicko Security Code Scanner
+      uses: witmicko/Security-Code-Scanner
+      with:
+        paths-ignored: ['tests/*', 'dist/*']
+        rules-ignored: ['codeql/thisisabadrule']
