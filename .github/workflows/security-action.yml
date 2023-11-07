@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: witmicko Security Code Scanner
-      uses: witmicko/Security-Code-Scanner
+      uses: witmicko/Security-Code-Scanner@main
       with:
         paths-ignored: ['tests/*', 'dist/*']
         rules-ignored: ['codeql/thisisabadrule']
