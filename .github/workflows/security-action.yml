@@ -12,9 +12,7 @@ on:
 jobs:
   run-security-scan:
     runs-on: ubuntu-latest
-
     steps:
-
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -23,3 +21,4 @@ jobs:
       with:
         paths-ignored: ['tests/*', 'dist/*']
         rules-ignored: ['codeql/thisisabadrule']
+        
