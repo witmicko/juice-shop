@@ -3,6 +3,15 @@ name: "Code Scanning"
 
 on:
   workflow_dispatch:
+    inputs:
+      paths-ignored:
+        description: 'Comma-separated list of paths to ignore in scan'
+        required: true
+        default: 'path/to/ignore'
+      rules-ignored:
+        description: 'Comma-separated list of rule IDs to ignore'
+        required: true
+        default: 'rule1,rule2'
   # push:
   #   branches: [ '*' ]
   # pull_request:
@@ -18,6 +27,6 @@ jobs:
     - name: witmicko Security Code Scanner
       uses: witmicko/Security-Code-Scanner@main
       with:
-        paths-ignored: test
-        rules-ignored: test
+        paths-ignored: ${{ github.event.inputs.paths-ignored }}
+        rules-ignored: ${{ github.event.inputs.rules-ignored }}
         
