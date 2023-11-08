@@ -19,6 +19,6 @@ jobs:
     - name: witmicko Security Code Scanner
       uses: witmicko/Security-Code-Scanner@main
       with:
-        paths-ignored: "test"
-        rules-ignored: "['codeql/thisisabadrule']"
+        paths-ignored: test
+        rules-ignored: test
         
