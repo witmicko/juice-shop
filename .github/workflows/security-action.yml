@@ -1,5 +1,4 @@
-# witmicko-code-scanning.yml
-
+# security-action.yml
 name: "Code Scanning"
 
 on:
