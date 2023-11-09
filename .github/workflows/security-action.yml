@@ -24,7 +24,7 @@ jobs:
       - name: Echo the input paths_ignored
         run: |
           echo "The input is: ${{ inputs.paths_ignored }}"
-          echo "The input is: ${{ github.event.inputs.rules_ignored }}"
+          # echo "The input is: ${{ github.event.inputs.rules_ignored }}"
         
       - name: Checkout
         uses: actions/checkout@v4
