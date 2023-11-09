@@ -20,13 +20,18 @@ on:
 jobs:
   run-security-scan:
     runs-on: ubuntu-latest
-    steps:   
+    steps:
+      # - name: Echo the input paths_ignored
+      #   run: |
+      #     echo "The input is: ${{ inputs.paths_ignored }}"
+      #     # echo "The input is: ${{ github.event.inputs.rules_ignored }}"
+        
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: witmicko Security Code Scanner
         uses: witmicko/Security-Code-Scanner@main
         with:
-          paths_ignored: ${{ inputs.paths_ignored }}
-          rules_ignored: ${{ inputs.rules_ignored }}
+          paths_ignored: ${{ github.event.inputs.paths_ignored }}
+          rules_ignored: ${{ github.event.inputs.rules_ignored }}
           
