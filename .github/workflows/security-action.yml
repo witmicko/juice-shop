@@ -22,9 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo the input paths_ignored
-        run: echo The input is: ${{ github.event.inputs.paths_ignored }}
-      - name: Echo the input rules_ignored
-        run: echo The input is: ${{ github.event.inputs.rules_ignored }}
+        run: echo "The input is: ${{ github.event.inputs.paths_ignored }}"
+      # - name: Echo the input rules_ignored
+      #   run: echo The input is: ${{ github.event.inputs.rules_ignored }}
         
       - name: Checkout
         uses: actions/checkout@v4
