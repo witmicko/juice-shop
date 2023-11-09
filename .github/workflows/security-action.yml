@@ -4,11 +4,11 @@ name: "Code Scanning"
 on:
   workflow_dispatch:
     inputs:
-      paths-ignored:
+      paths_ignored:
         description: 'Comma-separated list of paths to ignore in scan'
         required: true
         default: 'path/to/ignore'
-      rules-ignored:
+      rules_ignored:
         description: 'Comma-separated list of rule IDs to ignore'
         required: true
         default: 'rule1,rule2'
@@ -21,12 +21,17 @@ jobs:
   run-security-scan:
     runs-on: ubuntu-latest
     steps:
+    - name: Echo the input paths_ignored
+      run: echo "The input is: ${{ github.event.inputs.paths_ignored }}"
+    - name: Echo the input rules_ignored
+      run: echo "The input is: ${{ github.event.inputs.rules_ignored }}"
+      
     - name: Checkout
       uses: actions/checkout@v4
 
     - name: witmicko Security Code Scanner
       uses: witmicko/Security-Code-Scanner@main
       with:
-        paths-ignored: ${{ github.event.inputs.paths-ignored }}
-        rules-ignored: ${{ github.event.inputs.rules-ignored }}
+        paths-ignored: ${{ github.event.inputs.paths_ignored }}
+        rules-ignored: ${{ github.event.inputs.rules_ignored }}
         
