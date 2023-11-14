@@ -9,11 +9,9 @@ on:
         required: true
         default: 'path/to/ignore'
       queries:
-        description: 'Appsec qls packs to run, yaml format'
+        description: 'Appsec qls packs to run, json format'
         required: true
-        default: |
-          - name: "Juiceshop qls pack"
-            value: "qls-packs/juiceshop.qls"
+        default: '{ d"name": "Juiceshop qls pack", "value": "qls-packs/juiceshop.qls"}'
   # push:
   #   branches: [ '*' ]
   # pull_request:
