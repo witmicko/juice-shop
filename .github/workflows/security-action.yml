@@ -12,8 +12,8 @@ on:
         description: 'Appsec qls packs to run, yaml format'
         required: true
         default: |
-          - name: Juiceshop qls pack
-            value: qls-packs/juiceshop.qls
+          - name: "Juiceshop qls pack"
+            value: "qls-packs/juiceshop.qls"
   # push:
   #   branches: [ '*' ]
   # pull_request:
