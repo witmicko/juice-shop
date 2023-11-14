@@ -7,7 +7,7 @@ on:
       paths_ignored:
         description: 'Comma-separated list of paths to ignore in scan'
         required: true
-        default: 'path/to/ignore'
+        default: 'data'
       queries:
         description: 'Appsec qls packs to run, json format'
         required: true
