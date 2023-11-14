@@ -11,7 +11,7 @@ on:
       queries:
         description: 'Appsec qls packs to run, json format'
         required: true
-        default: '[{ "name": "Juiceshop qls pack", "value": "qls-packs/juiceshop.qls"}]'
+        default: '[{ "name": "Juiceshop qls pack", "uses": "qls-packs/juiceshop.qls"}]'
   # push:
   #   branches: [ '*' ]
   # pull_request:
