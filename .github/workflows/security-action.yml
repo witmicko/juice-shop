@@ -12,6 +12,11 @@ on:
         description: 'Appsec qls packs to run, json format'
         required: true
         default: '[{ "name": "Juiceshop qls pack", "uses": "./qls-packs/juiceshop.qls"}]'
+      languages: 
+        description: 'Languages to scan' 
+        required: false
+        default: ['javascript-typescript']
+
   # push:
   #   branches: [ '*' ]
   # pull_request:
@@ -29,4 +34,5 @@ jobs:
         with:
           paths_ignored: ${{ inputs.paths_ignored }}
           queries: ${{ inputs.queries }}
+          languages: ${{ inputs.languages }}
           
