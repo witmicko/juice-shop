@@ -15,7 +15,7 @@ on:
       languages: 
         description: 'Languages to scan' 
         required: false
-        default: 'javascript-typescript','typescript'
+        default: '"javascript-typescript","typescript"'
 
   # push:
   #   branches: [ '*' ]
