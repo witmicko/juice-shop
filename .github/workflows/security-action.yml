@@ -1,5 +1,5 @@
 # security-action.yml
-name: "Code Scanning"
+name: "Security Action"
 
 on:
   workflow_dispatch:
