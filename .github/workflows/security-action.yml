@@ -14,8 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: witmicko Security Code Scanner
-        uses: witmicko/Security-Code-Scanner@main
+      - name: NicholasEllul Security Code Scanner
+        uses: NicholasEllul/Security-Code-Scanner@main
         with:
           paths_ignored: 'data,test'
           queries: '[{ "name": "Juiceshop qls pack", "uses": "./qls-packs/juiceshop.qls"}]'
