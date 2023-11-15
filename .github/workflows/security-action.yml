@@ -9,11 +9,8 @@ jobs:
   run-security-scan:
     runs-on: ubuntu-latest
     steps:   
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: CodeQL Scan
-        uses: NicholasEllul/Appsec-CodeQL@main
+      - name: Security Code Scanner
+        uses: NicholasEllul/Security-Code-Scanner@main
         with:
           paths_ignored: 'data,test'
           languages: "javascript-typescript, typescript"
