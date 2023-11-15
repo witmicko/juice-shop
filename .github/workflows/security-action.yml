@@ -4,8 +4,6 @@ name: "Security Action"
 on:
   push:
     branches: [ '*' ]
-  pull_request:
-    branches: [ '*' ]
 
 jobs:
   run-security-scan:
