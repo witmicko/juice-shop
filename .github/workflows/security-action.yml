@@ -14,8 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: NicholasEllul Security Code Scanner
-        uses: NicholasEllul/Security-Code-Scanner@main
+      - name: CodeQL Scan
+        uses: NicholasEllul/Appsec-CodeQL@main
         with:
           paths_ignored: 'data,test'
           queries: '[{ "name": "Juiceshop qls pack", "uses": "./qls-packs/juiceshop.qls"}]'
