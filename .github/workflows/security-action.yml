@@ -10,7 +10,7 @@ on:
         default: 'data,test'
       queries:
         description: 'Appsec qls packs to run, json format'
-        required: true
+        required: false
         default: '[{ "name": "Juiceshop qls pack", "uses": "./qls-packs/juiceshop.qls"}]'
       languages: 
         description: 'Languages to scan' 
@@ -35,4 +35,5 @@ jobs:
           paths_ignored: ${{ inputs.paths_ignored }}
           queries: ${{ inputs.queries }}
           languages: ${{ inputs.languages }}
+          repo: ${{ github.repository }}
           
