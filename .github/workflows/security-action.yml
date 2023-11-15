@@ -21,6 +21,3 @@ jobs:
           queries: '[{ "name": "Juiceshop qls pack", "uses": "./qls-packs/juiceshop.qls"}]'
           languages: "javascript-typescript, typescript"
           repo: ${{ github.repository }}
-
-      - name: Output repository
-        run: echo "The repository is ${{ github.repository }}"
