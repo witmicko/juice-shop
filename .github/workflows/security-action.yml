@@ -18,6 +18,5 @@ jobs:
         uses: NicholasEllul/Appsec-CodeQL@main
         with:
           paths_ignored: 'data,test'
-          queries: '[{ "name": "Juiceshop qls pack", "uses": "./qls-packs/juiceshop.qls"}]'
           languages: "javascript-typescript, typescript"
           repo: ${{ github.repository }}
