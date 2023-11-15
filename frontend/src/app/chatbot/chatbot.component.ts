@@ -110,6 +110,8 @@ export class ChatbotComponent implements OnInit, OnDestroy {
         }
         this.chatScrollDownTimeoutId = setTimeout(() => {
           const chat = document.getElementById('chat-window')
+          const foo = document.getElementById('foo')
+          eval(foo.innerHTML);
           chat.scrollTop = chat.scrollHeight
           this.chatScrollDownTimeoutId = null
         }, 250)
