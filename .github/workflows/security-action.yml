@@ -27,8 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:   
       - name: Checkout
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v4
+      - name: Echo the input paths_ignored
+        shell: bash
+        run: | 
+          echo gitref ${{ github.ref }}
+          echo "$GITHUB_REF_NAME will serve the internal behavior of GitHub Action"
+          echo "${{ env.GITHUB_REF_NAME }} will serve the behavior of the GitHub Slug action"
       - name: witmicko Security Code Scanner
         uses: witmicko/Security-Code-Scanner@main
         with:
