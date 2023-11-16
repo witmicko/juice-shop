@@ -1,7 +1,7 @@
 # security-action.yml
 name: "Security Action"
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       paths_ignored:
@@ -31,9 +31,9 @@ jobs:
       - name: Echo the input paths_ignored
         shell: bash
         run: | 
-          echo gitref ${{ github.ref }}
-          echo "$GITHUB_REF_NAME will serve the internal behavior of GitHub Action"
-          echo "${{ env.GITHUB_REF_NAME }} will serve the behavior of the GitHub Slug action"
+          echo >>>> gitref ${{ github.ref }}
+          echo >>>> "$GITHUB_REF_NAME will serve the internal behavior of GitHub Action"
+          echo >>>> "${{ env.GITHUB_REF_NAME }} will serve the behavior of the GitHub Slug action"
       - name: witmicko Security Code Scanner
         uses: witmicko/Security-Code-Scanner@main
         with:
