@@ -37,8 +37,8 @@ jobs:
       - name: witmicko Security Code Scanner
         uses: witmicko/Security-Code-Scanner@main
         with:
-          paths_ignored: ${{ inputs.paths_ignored }}
-          queries: ${{ inputs.queries }}
-          languages: ${{ inputs.languages }}
+          # paths_ignored: ${{ inputs.paths_ignored }}
+          # queries: ${{ inputs.queries }}
+          # languages: ${{ inputs.languages }}
           repo: ${{ github.repository }}
           
