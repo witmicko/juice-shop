@@ -20,7 +20,7 @@ The minimum requirements for code contributions are:
 5. All Git commits within a PR _must_ be [signed off](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s) to indicate the contributor's agreement with the [Developer Certificate of Origin](https://developercertificate.org/).
 
 ### Contribution Guidelines
-
+d
 You can find our detailed contribution guidelines over here:
 
 <https://pwning.owasp-juice.shop/companion-guide/latest/part3/contribution.html>
