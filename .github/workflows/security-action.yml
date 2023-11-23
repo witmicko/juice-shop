@@ -9,19 +9,5 @@ jobs:
   run-security-scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install @actions/core @actions/github
-
       - name: Print GitHub Context
-        run: |
-          const core = require('@actions/core');
-          const github = require('@actions/github');
-          core.info(JSON.stringify(github.context, null, 2));
+        run: echo "${{ toJson(github) }}"
