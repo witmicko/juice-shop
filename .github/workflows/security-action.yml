@@ -8,10 +8,20 @@ on:
 jobs:
   run-security-scan:
     runs-on: ubuntu-latest
-    steps:   
-      - name: Security Code Scanner
-        uses: NicholasEllul/Security-Code-Scanner@main
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          paths_ignored: 'data,test'
-          languages: "javascript-typescript, typescript"
-          repo: ${{ github.repository }}
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install @actions/core @actions/github
+
+      - name: Print GitHub Context
+        run: |
+          const core = require('@actions/core');
+          const github = require('@actions/github');
+          core.info(JSON.stringify(github.context, null, 2));
