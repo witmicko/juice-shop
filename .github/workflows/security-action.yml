@@ -1,15 +1,16 @@
 # security-action.yml
 name: "Security Action"
-inputs:
-  paths_ignored:
-    description: 'Comma delimitted paths to ignore during scan' 
-    required: false
-  rules_excluded:
-    description: 'Comma delimitted IDs of rules to exclude' 
-    required: false
+
 
 on:
   workflow_dispatch:
+    inputs:
+      paths_ignored:
+        description: 'Comma delimited paths to ignore during scan' 
+        required: false
+      rules_excluded:
+        description: 'Comma delimited IDs of rules to exclude' 
+        required: false
 
   # push:
   #   branches: [ '*' ]
