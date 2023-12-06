@@ -16,6 +16,6 @@ jobs:
         repository: ${{ github.repository }}
         
     - name: Security Code Scanner
-      uses: MetaMask/Security-Code-Scanner@v1
+      uses: MetaMask/Security-Code-Scanner@main
       with:
         repo: ${{ github.repository }}
