@@ -1,13 +1,21 @@
-# security-action.yml
-name: "Security Action"
+name: Security Scan
 
 on:
   push:
     branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
 
 jobs:
-  run-security-scan:
+  security-scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Print GitHub Context
-        run: echo "${{ toJson(github) }}"
+    - name: Check out repo to scan
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ github.repository }}
+        
+    - name: Security Code Scanner
+      uses: MetaMask/Security-Code-Scanner@v1
+      with:
+        repo: ${{ github.repository }}
